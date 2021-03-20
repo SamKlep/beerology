@@ -1,7 +1,7 @@
 const beers = [
   {
     name: 'Spring Bock',
-    image: '/images/spring-bock.png',
+    image: '/img/spring-bock.png',
     brand: 'St. Arnolds',
     category: 'Lager',
     description:
@@ -10,7 +10,7 @@ const beers = [
   },
   {
     name: 'Lawnmower',
-    image: '/images/lawnmower.jpeg',
+    image: '/img/lawnmower.jpeg',
     brand: 'St. Arnolds',
     category: 'Kölsch',
     description:
@@ -19,7 +19,7 @@ const beers = [
   },
   {
     name: 'Sierra Nevada',
-    image: '/images/sierra-nevada.png',
+    image: '/img/sierra-nevada.png',
     brand: 'Sierra Nevada',
     category: 'IPA',
     description:
@@ -28,7 +28,7 @@ const beers = [
   },
   {
     name: 'Hazy Little Thingha',
-    image: '/images/hazy-little-thing.jpeg',
+    image: '/img/hazy-little-thing.jpeg',
     brand: 'Sierra Nevada',
     category: 'IPA',
     description:
@@ -37,7 +37,7 @@ const beers = [
   },
   {
     name: 'All Day IPA',
-    image: '/images/all-day.png',
+    image: '/img/all-day.png',
     brand: 'Founders',
     category: 'IPA',
     description:
@@ -46,7 +46,7 @@ const beers = [
   },
   {
     name: 'El Hefe',
-    image: '/images/elhefe.jpeg',
+    image: '/img/elhefe.jpeg',
     brand: 'No Label',
     category: 'Hefeweizen',
     description:

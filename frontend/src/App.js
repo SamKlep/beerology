@@ -22,8 +22,6 @@ function App() {
       <main className='py-3'>
         <Container>
           <Switch>
-            <Route path='/dashboard' component={DashboardScreen} />
-            <Route path='/preferences' component={PreferencesScreen} />
             <Route path='/' component={HomeScreen} />
           </Switch>
         </Container>
