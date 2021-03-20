@@ -1,14 +1,17 @@
-import { Card, Button } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const BeerItem = ({ beer }) => {
   console.log(beer)
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant='top' src={beer.image} />
+    <Card>
+      <Card.Img src={beer.image} />
       <Card.Body>
         <Card.Title>{beer.name}</Card.Title>
         <Card.Text>{beer.description}</Card.Text>
-        <Button variant='primary'>See more</Button>
+        <Link to={`/beers/${beer._id}`}>
+          <Card.Link>Learn more</Card.Link>
+        </Link>
       </Card.Body>
     </Card>
   )

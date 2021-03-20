@@ -4,11 +4,11 @@ import './App.css'
 
 import HomeScreen from './components/screens/HomeScreen'
 import Header from './components/layout/Header'
-import DashboardScreen from './components/screens/DashboardScreen'
-import PreferencesScreen from './components/screens/PreferencesScreen'
+
 import Footer from './components/layout/Footer'
 import LoginScreen from './components/screens/LoginScreen'
 import useToken from './useToken'
+import BeerScreen from './components/screens/BeerScreen'
 
 function App() {
   const { token, setToken } = useToken()
@@ -22,6 +22,7 @@ function App() {
       <main className='py-3'>
         <Container>
           <Switch>
+            <Route path='/beers/:id' component={BeerScreen} />
             <Route path='/' component={HomeScreen} />
           </Switch>
         </Container>
