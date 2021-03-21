@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import BeersGrid from '../home/BeersGrid'
+import Main from '../home/Main'
 
 const HomeScreen = () => {
   const [beers, setBeers] = useState([])
@@ -19,6 +20,7 @@ const HomeScreen = () => {
   }, [])
   return (
     <div>
+      <Main />
       <BeersGrid isLoading={isLoading} beers={beers} />
     </div>
   )

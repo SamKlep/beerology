@@ -5,10 +5,12 @@ const BeerItem = ({ beer }) => {
   console.log(beer)
   return (
     <Card>
-      <Card.Img src={beer.image} />
+      <Link to={`/beers/${beer._id}`}>
+        <Card.Img className='card-main' src={beer.image} />
+      </Link>
       <Card.Body>
         <Card.Title>{beer.name}</Card.Title>
-        <Card.Text>{beer.description}</Card.Text>
+        <Card.Text>{beer.category}</Card.Text>
         <Link to={`/beers/${beer._id}`}>
           <Card.Link>Learn more</Card.Link>
         </Link>

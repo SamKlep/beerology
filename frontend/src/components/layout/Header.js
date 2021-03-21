@@ -6,7 +6,7 @@ const Header = () => {
     <>
       <Navbar bg='primary' variant='dark' expand='lg'>
         <Navbar.Brand href='/'>
-          <span>
+          <span className='logo-font'>
             Beerology <i className='fas fa-beer'></i>
           </span>
         </Navbar.Brand>
@@ -14,7 +14,11 @@ const Header = () => {
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='ml-auto'>
             <Nav.Link href='/'>Home</Nav.Link>
-            <Nav.Link href='/history'>History</Nav.Link>
+            <NavDropdown title='Info' id='basic-nav-dropdown'>
+              <NavDropdown.Item href='/history'>History</NavDropdown.Item>
+              <NavDropdown.Item href='/brewing'>Brewing</NavDropdown.Item>
+              {/* <NavDropdown.Item href='/ipa'>IPA</NavDropdown.Item> */}
+            </NavDropdown>
             <NavDropdown title='Beers' id='basic-nav-dropdown'>
               <NavDropdown.Item href='/ale'>Ale</NavDropdown.Item>
               <NavDropdown.Item href='/lager'>Lager</NavDropdown.Item>

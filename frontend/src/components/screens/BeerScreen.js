@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Card, Button, Image } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { Card, ListGroup, Row, Container, Col, Button } from 'react-bootstrap'
 
 const BeerScreen = ({ match }) => {
   const [beer, setBeer] = useState({})
@@ -18,18 +18,33 @@ const BeerScreen = ({ match }) => {
   }, [match])
 
   return (
-    <div>
-      <Link to='/'>
-        <Button>Go back</Button>
-      </Link>
-      <>
-        <Image variant='top' src={beer.image} />
-        <div className=''>
-          <h1>{beer.name}</h1>
-          <p>{beer.description}</p>
-        </div>
-      </>
-    </div>
+    <>
+      <Container>
+        <Row>
+          <Col>
+            <Link to='/'>
+              <Button>Go back</Button>
+            </Link>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Card className='mx-auto' style={{ width: '18rem' }}>
+              <Card.Img variant='top' src={beer.image} />
+              <Card.Body>
+                <Card.Title>{beer.name}</Card.Title>
+                <ListGroup variant='flush'>
+                  <ListGroup.Item>{beer.brand}</ListGroup.Item>
+                  <ListGroup.Item>{beer.category}</ListGroup.Item>
+                  <ListGroup.Item>{beer.abv} %</ListGroup.Item>
+                </ListGroup>
+                <Card.Text>{beer.description}</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </>
   )
 }
 

@@ -1,16 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: rgb(255, 196, 0);
+}
+
+.logo-font {
+  font-family: 'Chango', cursive;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
 
-.card img {
+.card-main {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
 
-.card li {
-  list-style: none;
-  padding-bottom: 10px;
+.hops-main {
+  background-image: url('./img/hops-close.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
 }
